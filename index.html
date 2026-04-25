@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atlas del Cristianismo — Denominaciones y Teología</title>
+  <meta name="description" content="Cuadro comparativo interactivo de las principales denominaciones cristianas: triaje bíblico, gobierno eclesiástico, escatología y más." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ── HERO ── -->
+  <header class="hero">
+    <div class="hero-bg">
+      <div class="hero-cross"></div>
+      <div class="grain"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Atlas Teológico · 33 d.C. — Actualidad</p>
+      <h1 class="hero-title">
+        <span class="line">Denominaciones</span>
+        <span class="line italic">Cristianas</span>
+      </h1>
+      <p class="hero-subtitle">
+        Un cuadro comparativo exhaustivo: triaje bíblico, gobierno eclesiástico,<br />
+        escatología, canon bíblico y posturas doctrinales de cada tradición.
+      </p>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-n" data-target="33">0</span><span class="stat-label">Tradiciones</span></div>
+        <div class="stat-sep">·</div>
+        <div class="stat"><span class="stat-n" data-target="15">0</span><span class="stat-label">Variables</span></div>
+        <div class="stat-sep">·</div>
+        <div class="stat"><span class="stat-n" data-target="2000">0</span><span class="stat-label">Años de historia</span></div>
+      </div>
+      <a href="#tabla" class="cta-btn">Explorar el Atlas <span class="arrow">↓</span></a>
+    </div>
+    <div class="scroll-hint">Desplaza para explorar</div>
+  </header>
+
+  <!-- ── TRIAGE LEGEND ── -->
+  <section class="legend-section" id="triaje">
+    <div class="container">
+      <h2 class="section-title">El Triaje Bíblico</h2>
+      <p class="section-sub">Concepto desarrollado por Albert Mohler: no toda doctrina es igual de esencial.</p>
+      <div class="triage-cards">
+        <div class="triage-card t1">
+          <span class="triage-num">01</span>
+          <h3>Orden Primario</h3>
+          <p>Doctrinas <strong>esenciales para la salvación</strong>. Negarlas excluye del cristianismo ortodoxo.</p>
+          <ul>
+            <li>Trinidad</li><li>Cristología (plena deidad y humanidad)</li>
+            <li>Justificación por fe</li><li>Resurrección corporal</li>
+          </ul>
+          <div class="triage-badge">Sin comunión posible si se niegan</div>
+        </div>
+        <div class="triage-card t2">
+          <span class="triage-num">02</span>
+          <h3>Orden Secundario</h3>
+          <p>Importantes para la <strong>comunión eclesiástica</strong>. Justifican denominaciones distintas.</p>
+          <ul>
+            <li>Modo del bautismo</li><li>Gobierno de la iglesia</li>
+            <li>Sacramentos</li><li>Dones del Espíritu</li>
+          </ul>
+          <div class="triage-badge">Cooperación posible, comunión limitada</div>
+        </div>
+        <div class="triage-card t3">
+          <span class="triage-num">03</span>
+          <h3>Orden Terciario</h3>
+          <p>Preferencias de <strong>cultura y práctica</strong>. No justifican separación.</p>
+          <ul>
+            <li>Escatología detallada</li><li>Estilo de adoración</li>
+            <li>Normas de vestimenta</li><li>Días de ayuno</li>
+          </ul>
+          <div class="triage-badge">Plena cooperación posible</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FILTERS + TABLE ── -->
+  <section class="table-section" id="tabla">
+    <div class="container wide">
+      <div class="table-header">
+        <h2 class="section-title">Atlas Comparativo</h2>
+        <p class="section-sub">Filtra, busca y ordena las 33 tradiciones cristianas.</p>
+      </div>
+
+      <!-- Controls -->
+      <div class="controls-bar">
+        <div class="search-wrap">
+          <span class="search-icon">⌕</span>
+          <input type="text" id="search" placeholder="Buscar denominación, doctrina, año…" />
+          <kbd id="clear-search" title="Limpiar">✕</kbd>
+        </div>
+        <div class="filters">
+          <select id="filtFamilia">
+            <option value="">Todas las familias</option>
+            <option value="Católica">Católica</option>
+            <option value="Ortodoxa">Ortodoxa</option>
+            <option value="Luterana">Luterana</option>
+            <option value="Reformada">Reformada</option>
+            <option value="Anglicana">Anglicana</option>
+            <option value="Anabautista">Anabautista</option>
+            <option value="Metodista">Metodista</option>
+            <option value="Bautista">Bautista</option>
+            <option value="Pentecostal">Pentecostal</option>
+            <option value="Carismática">Carismática</option>
+            <option value="Neopentecostal">Neopentecostal</option>
+            <option value="Adventista">Adventista</option>
+            <option value="Restauracionista">Restauracionista</option>
+            <option value="No trinitaria">No trinitaria</option>
+            <option value="Cuáquera">Cuáquera</option>
+          </select>
+          <select id="filtGobierno">
+            <option value="">Todos los gobiernos</option>
+            <option value="Episcopal">Episcopal</option>
+            <option value="Presbiteriano">Presbiteriano</option>
+            <option value="Congregacional">Congregacional</option>
+            <option value="Papal">Papal</option>
+          </select>
+          <select id="filtEscato">
+            <option value="">Toda escatología</option>
+            <option value="Amilenialismo">Amilenialismo</option>
+            <option value="Premilenialismo">Premilenialismo</option>
+            <option value="Posmilenialismo">Posmilenialismo</option>
+            <option value="Diverso">Diverso</option>
+          </select>
+        </div>
+        <span class="result-count" id="count">33 tradiciones</span>
+      </div>
+
+      <!-- Table wrapper -->
+      <div class="table-wrap">
+        <table id="mainTable">
+          <thead>
+            <tr>
+              <th data-col="year" class="sortable th-year">Año <span class="sort-ico">↕</span></th>
+              <th data-col="name" class="sortable th-name">Denominación <span class="sort-ico">↕</span></th>
+              <th class="th-familia">Familia</th>
+              <th class="th-doctrine">Doctrinas clave</th>
+              <th class="th-t1">Triaje 1°</th>
+              <th class="th-t2">Triaje 2°</th>
+              <th class="th-t3">Triaje 3°</th>
+              <th class="th-gobierno">Gobierno</th>
+              <th class="th-bautismo">Bautismo</th>
+              <th class="th-escato">Escatología</th>
+              <th class="th-canon">Canon</th>
+              <th class="th-nota">Distintivo clave</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+
+      <p class="warn-note">⚠ Las tradiciones marcadas en fondo amarillo no son consideradas ortodoxamente trinitarias según el triaje primario.</p>
+    </div>
+  </section>
+
+  <!-- ── DETAIL MODAL ── -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modal">
+      <button class="modal-close" id="modalClose">✕</button>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-cross">✝</span>
+          <h3>Atlas del Cristianismo</h3>
+          <p>Recurso académico para el estudio comparado de las tradiciones cristianas a través del triaje bíblico y el análisis eclesiológico.</p>
+        </div>
+        <div class="footer-refs">
+          <h4>Referencias doctrinales</h4>
+          <ul>
+            <li>Albert Mohler — <em>A Call for Theological Triage</em></li>
+            <li>Confesión de Westminster (1647)</li>
+            <li>Confesión de Augsburgo (1530)</li>
+            <li>Schleitheim Confession (1527)</li>
+            <li>Cánones de Dort (1618–19)</li>
+            <li>39 Artículos de Religión</li>
+          </ul>
+        </div>
+        <div class="footer-note">
+          <h4>Nota metodológica</h4>
+          <p>Este atlas es una herramienta académica. La clasificación por triaje no implica juicio soteriológico sobre individuos sino sobre sistemas doctrinales formales.</p>
+          <p class="footer-credit">Elaborado con rigor teológico · 2025</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
